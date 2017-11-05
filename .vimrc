@@ -2,6 +2,8 @@ syntax on
 
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 
+" Backspace
+set backspace=indent,eol,start
 
 " Indentation
 set smarttab                    " Better tabs
