@@ -6,6 +6,7 @@ My dot files repository
 This repository contains the dot files for the following applications.
 
 	* Vim
-	* Zsh
+	* zsh
 	* oh-my-zsh
+	* tmux
 
