@@ -1,5 +1,27 @@
-syntax on
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'valloric/YouCompleteMe'
+
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plugin 'junegunn/fzf.vim'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-colorscheme-switcher'
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+syntax on
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 
 " Backspace
@@ -9,7 +31,7 @@ set backspace=indent,eol,start
 set smarttab                    " Better tabs
 set smartindent                 " Inserts new level of indentation
 set autoindent                  " Copy indentation from previous line
-set tabstop=2                   " Columns a tab counts for
+set tabstop=4                   " Columns a tab counts for
 set softtabstop=2               " Columns a tab inserts in insert mode
 set shiftwidth=2                " Columns inserted with the reindent operations
 set shiftround                  " Always indent by multiple of shiftwidth
@@ -27,4 +49,14 @@ set spell                       " Enable by default
 let g:ycm_extra_conf_globlist=['~/.vim/*']
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 let g:ycm_collect_identifiers_from_tags_files = 1
+
+set rtp+=~/.fzf/bin
+
+:map <C-t> :Files<cr>
+:map <C-p> :tabnext<cr>
+:map <C-o> :tabprev<cr>
+
+
+" color scheme - Plugin flazz/vim-colorscheme
+colorscheme Monokai
 
