@@ -18,11 +18,16 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-colorscheme-switcher'
 " All of your Plugins must be added before the following line
+Plugin 'DoxygenToolkit.vim'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 syntax on
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+
+" Set line number
+set number
 
 " Backspace
 set backspace=indent,eol,start
